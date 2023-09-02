@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:AppGerentes.ViewModel"
              x:DataType="viewmodel:MainPageViewModel"
-             x:Class="AppGerentes.MainPage">
+             x:Class="AppGerentes.MainPage"
+             BackgroundColor="{AppThemeBinding Light=black, Dark=black}">
 
 
     <VerticalStackLayout
@@ -13,12 +14,12 @@
         <Grid RowDefinitions="200,Auto,100" ColumnDefinitions="*,Auto,*">
             <StackLayout Grid.Column="1" Grid.Row="1" Spacing="30">
 
-                <Label Text="Select a time frame and generate a QR code"
+                <Label Text="Select a time limit and generate a QR code"
                        TextColor="White"
-                       WidthRequest="200"
+                       WidthRequest="350"
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
-                />
+                       FontSize="30"/>
 
                 <Grid ColumnDefinitions="50,20,50,20,50" RowDefinitions="50" ColumnSpacing="2" HorizontalOptions="Center">
                     
