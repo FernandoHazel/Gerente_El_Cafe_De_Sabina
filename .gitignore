@@ -1,0 +1,38 @@
+# Visual Studio / Xamarin / .NET MAUI
+*.vs/
+*.userprefs
+*.user
+*.suo
+*.cache
+*.bin
+*.obj
+*.dll
+*.exe
+*.msi
+*.log
+*.deploy
+*.tmp
+*.pidb
+*.ide
+*.tlog
+*.testsettings
+*.loadtest
+ipch/
+TestResults/
+[Tt]humbs.db
+*.DS_Store
+
+# Build results
+[Bb]uild/
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+*.nuspec
+
+# MSTest
+testresults/
+[Bb]in/
+[Oo]bj/
+ñ

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:AppGerentes.ViewModel"
+             x:DataType="viewmodel:MainPageViewModel"
+             x:Class="AppGerentes.MainPage">
+
+
+    <VerticalStackLayout
+        BackgroundColor="{AppThemeBinding Light=Black, Dark=Black}">
+
+
+        <Grid RowDefinitions="200,Auto,100" ColumnDefinitions="*,Auto,*">
+            <StackLayout Grid.Column="1" Grid.Row="1" Spacing="30">
+
+                <Label Text="Select a time frame and generate a QR code"
+                       TextColor="White"
+                       WidthRequest="200"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                />
+
+                <Grid ColumnDefinitions="50,20,50,20,50" RowDefinitions="50" ColumnSpacing="2" HorizontalOptions="Center">
+                    
+                    <Entry Text="{Binding Hours, Mode=TwoWay}"
+                           Keyboard="Numeric"
+                           Placeholder="00"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                           Grid.Column="0"
+                           MaxLength="2"
+                           />
+
+                    <Label Text=":"
+                           Grid.Column="1"
+                           TextColor="White"
+                           VerticalOptions="Center"/>
+
+                    <Entry Text="{Binding Minutes, Mode=TwoWay}"
+                           Keyboard="Numeric"
+                           Placeholder="00"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                           Grid.Column="2"
+                           MaxLength="2"/>
+
+                    <Label Text=":"
+                           Grid.Column="3"
+                           TextColor="White"
+                           VerticalOptions="Center"/>
+
+                    <Entry Text="{Binding Seconds, Mode=TwoWay}"
+                           Keyboard="Numeric"
+                           Placeholder="00"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                           Grid.Column="4"
+                           MaxLength="2"/>
+
+                </Grid>
+
+                <Button Command="{Binding GenerateQRCodeCommand}"
+                        Text="Generate QR"
+                        WidthRequest="200"/>
+
+                <Image
+                    Source="{Binding QrCodeSource}"
+                    HeightRequest="300"
+                    WidthRequest="300"/>
+
+            </StackLayout>
+        </Grid>
+
+    </VerticalStackLayout>
+
+
+</ContentPage>
