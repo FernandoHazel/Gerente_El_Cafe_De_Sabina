@@ -11,7 +11,7 @@
         BackgroundColor="{AppThemeBinding Light=Black, Dark=Black}">
 
 
-        <Grid RowDefinitions="200,Auto,100" ColumnDefinitions="*,Auto,*">
+        <Grid RowDefinitions="50,Auto,100" ColumnDefinitions="*,Auto,*">
             <StackLayout Grid.Column="1" Grid.Row="1" Spacing="30">
 
                 <Label Text="Select a time limit and generate a QR code"
@@ -20,7 +20,7 @@
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
                        FontSize="30"/>
-
+<!--
                 <Grid ColumnDefinitions="50,20,50,20,50" RowDefinitions="50" ColumnSpacing="2" HorizontalOptions="Center">
                     
                     <Entry Text="{Binding Hours, Mode=TwoWay}"
@@ -59,9 +59,17 @@
                            MaxLength="2"/>
 
                 </Grid>
+-->
+                <Button Command="{Binding OneHourCommand}"
+                        Text="Generate 1 hour QR"
+                        WidthRequest="200"/>
 
-                <Button Command="{Binding GenerateQRCodeCommand}"
-                        Text="Generate QR"
+                <Button Command="{Binding TwoHoursCommand}"
+                        Text="Generate 2 hours QR"
+                        WidthRequest="200"/>
+                
+                <Button Command="{Binding ThreeHoursCommand}"
+                        Text="Generate 3 hours QR"
                         WidthRequest="200"/>
 
                 <Image

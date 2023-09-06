@@ -23,6 +23,35 @@ namespace AppGerentes.ViewModel
         [ObservableProperty]
         string qRValue;
 
+        [RelayCommand]
+        public void OneHour()
+        {
+            Hours = "01";
+            Minutes = "00";
+            Seconds = "00";
+
+            GenerateQRCode();
+        }
+
+        [RelayCommand]
+        public void TwoHours()
+        {
+            Hours = "02";
+            Minutes = "00";
+            Seconds = "00";
+
+            GenerateQRCode();
+        }
+
+        [RelayCommand]
+        public void ThreeHours()
+        {
+            Hours = "03";
+            Minutes = "00";
+            Seconds = "00";
+
+            GenerateQRCode();
+        }
 
         [RelayCommand]
         public void GenerateQRCode()
