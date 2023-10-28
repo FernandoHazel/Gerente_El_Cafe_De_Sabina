@@ -79,6 +79,7 @@ namespace AppGerentes.ViewModel
 
             //Set the value of the QR
             string qrCodeValue = $"{Hours}:{Minutes}:{Seconds}";
+            //qrCodeValue = "https://tiktalk.page.link/y1E4";
 
             Console.WriteLine(qrCodeValue);
 
